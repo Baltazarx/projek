@@ -1,0 +1,9 @@
+"use client";
+
+export default function () {
+  return (
+    
+  );
+}
+
+className="flex justify-center items-center bg-white min-h-screen"
