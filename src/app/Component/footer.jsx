@@ -19,10 +19,10 @@ export default function Footer() {
                     <div className="w-full md:w-1/4 mb-6 md:mb-0">
                         <h3 className="text-purple-600 text-lg font-bold mb-4">COMPANY</h3>
                         <ul className="text-gray-600">
-                            <li className="mb-2"><Link href="#">Home</Link></li>
-                            <li className="mb-2"><Link href="#">Profile</Link></li>
-                            <li className="mb-2"><Link href="#">Blog</Link></li>
-                            <li className="mb-2"><Link href="#">Education</Link></li>
+                            <li className="mb-2"><Link href={'/'}>Home</Link></li>
+                            <li className="mb-2"><Link href={'/Profile'}>Profile</Link></li>
+                            <li className="mb-2"><Link href={'/Blog'}>Blog</Link></li>
+                            <li className="mb-2"><Link href={'/'}>Education</Link></li>
                         </ul>
                     </div>
                     
