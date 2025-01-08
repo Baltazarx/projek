@@ -19,27 +19,27 @@ export default function Header() {
         <nav className="hidden lg:flex space-x-6">
           <a
             href={'/'}
-            className="text-gray-700 hover:text-purple-600 transition duration-300 ease-in-out transform hover:scale-105 font-medium"
-          >
+            className="relative text-gray-700 hover:text-purple-600 transition duration-300 ease-in-out font-medium group">
             Home
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
           </a>
           <a
             href={'/About'}
-            className="text-gray-700 hover:text-purple-600 transition duration-300 ease-in-out transform hover:scale-105 font-medium"
-          >
+            className="relative text-gray-700 hover:text-purple-600 transition duration-300 ease-in-out font-medium group">
             Tentang kami
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
           </a>
           <a
             href={'/Mitra'}
-            className="text-gray-700 hover:text-purple-600 transition duration-300 ease-in-out transform hover:scale-105 font-medium"
-          >
+            className="relative text-gray-700 hover:text-purple-600 transition duration-300 ease-in-out font-medium group">
             Gabung Mitra
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
           </a>
           <a
             href={'/Blog'}
-            className="text-gray-700 hover:text-purple-600 transition duration-300 ease-in-out transform hover:scale-105 font-medium"
-          >
+            className="relative text-gray-700 hover:text-purple-600 transition duration-300 ease-in-out font-medium group">
             Blog
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
           </a>
         </nav>
 
