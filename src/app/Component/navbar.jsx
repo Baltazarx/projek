@@ -1,80 +1,107 @@
-//@ts-check
-"use client"
-import Link from "next/link";
+"use client";
 
-export default function Navbar() {
-    return (
-        <nav className="bg-white border-gray-200 mt fixed top-0 w-full z-50 shadow-lg dark:bg-gray-900">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <Link href={'/'} className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap text-purple-600 dark:text-white">Telang.</span>
-                </Link>
-                <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <a href={'/Login'}>
-                        <button 
-                            type="button" 
-                            className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" 
-                            id="user-menu-button" 
-                            aria-expanded="false" 
-                            data-dropdown-toggle="user-dropdown" 
-                            data-dropdown-placement="bottom"
-                        >
-                            <span className="sr-only">Open user menu</span>
-                            <img className="w-8 h-8 rounded-full" src="dandi.jpg" alt="user photo" />
-                        </button>
-                    </a>
-                    {/* Dropdown menu */}
-                    <div className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
-                        <div className="px-4 py-3">
-                            <span className="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-                            <span className="block text-sm text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
-                        </div>
-                        <ul className="py-2" aria-labelledby="user-menu-button">
-                            <li>
-                                <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</Link>
-                            </li>
-                            <li>
-                                <Link href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</Link>
-                            </li>
-                        </ul>
-                    </div>
-                    <button 
-                        data-collapse-toggle="navbar-user" 
-                        type="button" 
-                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" 
-                        aria-controls="navbar-user" 
-                        aria-expanded="false"
-                    >
-                        <span className="sr-only">Open main menu</span>
-                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
-                        </svg>
-                    </button>
-                </div>
-                <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
-                    <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                        <li>
-                            <Link href={'/'} className="block py-2 px-3 text-blue-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</Link>
-                        </li>
-                        <li>
-                            <Link href={'/About'} className="block py-2 px-3 text-blue-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</Link>
-                        </li>
-                        <li>
-                            <Link href={'/Mitra'} className="block py-2 px-3 text-blue-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Mitra</Link>
-                        </li>
-                        <li>
-                            <Link href={'/Blog'} className="block py-2 px-3 text-blue-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog</Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+import React, { useState } from "react";
+
+export default function Header() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  return (
+    <header className="backdrop-blur-md fixed top-0 left-0 w-full z-50 shadow-lg">
+      <div className="container max-h-full max-w-full px-4 py-5 justify-center flex items-center shadow-lg space-x-56">
+        {/* Logo */}
+        <div className="text-2xl font-bold text-purple-600">Telasia.</div>
+
+        {/* Navigation (Desktop) */}
+        <nav className="hidden lg:flex space-x-6">
+          <a
+            href={'/'}
+            className="text-gray-700 hover:text-purple-600 transition duration-300 ease-in-out transform hover:scale-105 font-medium"
+          >
+            Home
+          </a>
+          <a
+            href={'/About'}
+            className="text-gray-700 hover:text-purple-600 transition duration-300 ease-in-out transform hover:scale-105 font-medium"
+          >
+            Tentang kami
+          </a>
+          <a
+            href={'/Mitra'}
+            className="text-gray-700 hover:text-purple-600 transition duration-300 ease-in-out transform hover:scale-105 font-medium"
+          >
+            Gabung Mitra
+          </a>
+          <a
+            href={'/Blog'}
+            className="text-gray-700 hover:text-purple-600 transition duration-300 ease-in-out transform hover:scale-105 font-medium"
+          >
+            Blog
+          </a>
         </nav>
-    );
+
+        {/* Icons */}
+        <div className="hidden lg:flex space-x-4">
+          <a href={''}><i className="fas fa-search text-gray-700 hover:text-purple-600 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"></i></a>
+          <a href={'/Login'}><i className="fas fa-user text-gray-700 hover:text-purple-600 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"></i></a>
+          <a href={'/Daftarproduk'}><i className="fas fa-shopping-cart text-gray-700 hover:text-purple-600 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"></i></a>
+        </div>
+
+        {/* Burger Menu (Mobile & Sidebar Toggle) */}
+        <button
+          className="burger-menu block lg:hidden focus:outline-none"
+          onClick={toggleSidebar}
+        >
+          <span className="burger-line block w-6 h-1 bg-purple-600 my-1"></span>
+          <span className="burger-line block w-6 h-1 bg-purple-600 my-1"></span>
+          <span className="burger-line block w-6 h-1 bg-purple-600 my-1"></span>
+        </button>
+      </div>
+
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-40 ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        {/* Close Button */}
+        <button
+          className="absolute top-4 right-4 text-gray-700 hover:text-purple-600"
+          onClick={toggleSidebar}
+        >
+          <i className="fas fa-times text-xl"></i>
+        </button>
+
+        {/* Sidebar Content */}
+        <div className="p-6">
+          <div className="text-2xl font-bold text-purple-600 mb-6">Telasia.</div>
+          <nav className="flex flex-col space-y-4">
+            <a href={'/'} className="text-gray-700 hover:text-purple-600">
+              Home
+            </a>
+            <a href={'/About'} className="text-gray-700 hover:text-purple-600">
+              Tentang kami
+            </a>
+            <a href={'/Mitra'} className="text-gray-700 hover:text-purple-600">
+              Gabung Mitra
+            </a>
+            <a href={'/Blog'} className="text-gray-700 hover:text-purple-600">
+              Blog
+            </a>
+          </nav>
+        </div>
+      </div>
+
+      {/* Overlay */}
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black opacity-50 transition-opacity duration-300 z-30"
+          onClick={toggleSidebar}
+        ></div>
+      )}
+    </header>
+  );
 }

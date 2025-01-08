@@ -99,7 +99,7 @@ export default function Home() {
                         </a>
                     </div>
                 </div>
-            </div> *\\\\*
+            </div>
             <section className="bg-purple-600 text-white py-10">
             <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 mb-6 md:mb-0">
