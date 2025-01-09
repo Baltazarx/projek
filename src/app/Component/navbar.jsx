@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <header className="backdrop-blur-md fixed top-0 left-0 w-full z-50 shadow-lg">
-      <div className="container max-h-full max-w-full px-4 py-5 justify-center flex items-center shadow-lg space-x-56">
+      <div className="container max-h-full max-w-full px-4 py-5 justify-center flex items-center shadow-lg space-x-64">
         {/* Logo */}
         <div className="text-2xl font-bold text-purple-600">Telasia.</div>
 
@@ -32,7 +32,7 @@ export default function Header() {
           <a
             href={'/Mitra'}
             className="relative text-gray-700 hover:text-purple-600 transition duration-300 ease-in-out font-medium group">
-            Gabung Mitra
+            Mitra
             <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
           </a>
           <a
@@ -45,9 +45,9 @@ export default function Header() {
 
         {/* Icons */}
         <div className="hidden lg:flex space-x-4">
-          <a href={''}><i className="fas fa-search text-gray-700 hover:text-purple-600 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"></i></a>
-          <a href={'/Login'}><i className="fas fa-user text-gray-700 hover:text-purple-600 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"></i></a>
-          <a href={'/Daftarproduk'}><i className="fas fa-shopping-cart text-gray-700 hover:text-purple-600 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"></i></a>
+          <a href={''}><i className="fas fa-search hover:text-gray-700 text-purple-600 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"></i></a>
+          <a href={'/Login'}><i className="fas fa-user hover:text-gray-700 text-purple-600 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"></i></a>
+          <a href={'/Daftarproduk'}><i className="fas fa-shopping-cart hover:text-gray-700 text-purple-600 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"></i></a>
         </div>
 
         {/* Burger Menu (Mobile & Sidebar Toggle) */}

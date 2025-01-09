@@ -7,7 +7,7 @@ export default function DaftarProduk() {
   const products = [
     {
       image: "/produk-bibit telang.png",
-      title: "Pro 4 Gaming TWS Bluetooth Headset Bass...",
+      title: "Bibit Telang | Butterfly Pea Seeds",
       price: "Rp 36.900",
       discount: "",
       originalPrice: "",
@@ -16,12 +16,12 @@ export default function DaftarProduk() {
       sold: "10RB+ Terjual",
       badge: "",
       ad: "",
-      description: "Game Tanpa Lag / HiFi Dengan Mikrofon / HD Call",
+      description: "Bibit telang berkualitas tinggi ini siap ditanam untuk menghasilkan...",
       link: "/Daftarproduk-BibitTelang", // Ubah link untuk produk pertama
     },
     {
       image: "/produk-telang kering.png",
-      title: "Bose QuietComfort Ultra Earbuds ANC Noise...",
+      title: "Telang Kering | Dried Butterfly Pea Flower",
       price: "Rp 2.198.000",
       discount: "",
       originalPrice: "",
@@ -30,12 +30,12 @@ export default function DaftarProduk() {
       sold: "10 Terjual",
       badge: "",
       ad: "",
-      description: "Spacial Audio Active Noise Cancellation Comfort",
+      description: "Telang kering ini berasal dari bunga telang (Clitoria ternatea) pilihan...",
       link: "/Daftarproduk-TelangKering", // Ubah link untuk halaman produk
     },
     {
       image: "/produk-ekstrak telang.png",
-      title: "(New Launch) Soundcore K20i Earbuds...",
+      title: "Ekstrak Bunga Telang | Butterfly Flower Extract",
       price: "Rp 169.000",
       discount: "",
       originalPrice: "",
@@ -44,7 +44,7 @@ export default function DaftarProduk() {
       sold: "10RB+ Terjual",
       badge: "",
       ad: "",
-      description: "Spacial Audio Active Noise Cancellation Comfort",
+      description: "Ekstrak telang ini hasil olahan dari bunga telang (Clitoria ternatea)...",
       link: "/Daftarproduk-EkstrakTelang", // Ubah link untuk produk ketiga
     },
   ];

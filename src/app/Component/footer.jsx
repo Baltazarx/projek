@@ -10,8 +10,8 @@ export default function Footer() {
                     {/* Company Description */}
                     <div className="w-full md:w-1/4 mb-6 md:mb-0">
                         <h2 className="text-purple-600 text-xl font-bold mb-4">Telasia.</h2>
-                        <p className="text-gray-600">
-                            Memberikan manfaat Bunga Telang terbaik dengan komitmen pada kualitas, kesehatan, dan keberlanjutan lingkungan untuk kehidupan yang lebih bermakna.
+                        <p className="text-gray-600 text-base">
+                            Memberikan manfaat Bunga Telang <br />terbaik dengan komitmen pada kualitas,<br /> kesehatan, dan keberlanjutan lingkungan <br /> untuk kehidupan yang lebih bermakna.
                         </p>
                     </div>
                     
