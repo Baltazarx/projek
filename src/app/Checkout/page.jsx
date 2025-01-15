@@ -15,7 +15,7 @@ export default function DaftarProduk() {
   const handleSaveInfoChange = (e) => setIsSaveInfo(e.target.checked);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center py-6 m-20">
+    <div className="min-h-screen flex flex-col items-center justify-center py-6">
       <div className="bg-white shadow-md rounded-lg w-full max-w-4xl mx-auto flex flex-col md:flex-row">
         <div className="w-full md:w-2/3 p-6">
           <h2 className="text-purple-600 text-xl font-bold mb-4">Kontak</h2>
